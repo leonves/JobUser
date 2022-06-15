@@ -10,6 +10,14 @@ Steps to run this project:
 4. Run `npm start` command
 
 
+# Create Job
+Create `http://localhost:3000/jobs`
+
+example body request  
+{
+	"name": "Software Developer",
+}
+
 # Create User
 Create `http://localhost:3000/users`
 
