@@ -27,7 +27,8 @@ export class UsersCreate1655313807166 implements MigrationInterface {
                     },
                     {
                         name: "reports_to_id",
-                        type: "uuid"
+                        type: "uuid",
+                        isNullable: true
                     },
                     {
                         name: "created_at",

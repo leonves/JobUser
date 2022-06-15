@@ -1,4 +1,3 @@
-import { getRepository, Repository } from "typeorm";
 import { Job } from "../../entities/Job";
 import { configDatabase } from "../../ormconfig";
 import { IJobsRepository } from "../IJobsRepository";
@@ -17,5 +16,13 @@ export class PostgresJobsRepository implements IJobsRepository {
 
     async save(job: Job): Promise<void> {
         await jobRepo.save(job);
+    }
+
+    async findById(id: string): Promise<Job> {
+        return await jobRepo.findOne({
+            where: {
+                id: id
+            }
+        })
     }
 }

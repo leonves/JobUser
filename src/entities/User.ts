@@ -29,7 +29,7 @@ export class User {
     @JoinColumn({name: "reports_to_id"})
     public reports_to?: User;
 
-    constructor(props: Omit<User, 'id'>, id?: number) {
+    constructor(props: Omit<User, 'id'>, id?: string) {
         Object.assign(this, props);
         this.id = uuid()
     }

@@ -10,8 +10,6 @@ export class CreateJobUseCase {
     async execute(data: ICreateJobRequestDTO) {
         const jobAlreadyExistis = await this.jobRepository.findByName(data.name);
 
-        console.log(jobAlreadyExistis);
-        
         if (jobAlreadyExistis) {
             throw new Error('Job Already exists.')
         }

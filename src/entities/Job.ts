@@ -1,7 +1,6 @@
 import { Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 import { v4 as uuid } from "uuid";
 
-
 @Entity()
 export class Job {
     @PrimaryColumn()
