@@ -31,4 +31,8 @@ export class PostgresUserRepository implements IUsersRepository {
             relations: ["job"]
         })
     }}
+
+    async update(id: string, user: {}): Promise<void> {{
+        await userRepo.update(id, user)
+    }}
 }
