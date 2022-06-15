@@ -1,4 +1,6 @@
-# Awesome Project Build with TypeORM
+# Project Job and User
+
+project with typeorm and postgres
 
 Steps to run this project:
 
@@ -25,3 +27,14 @@ example body request
 # List User
 List All `http://localhost:3000/users`  
 List By Id `http://localhost:3000/users/id`
+
+# Update User
+
+Update By Id `http://localhost:3000/users/3fff705b-417b-4797-b8b5-20b6c3c57658`
+
+You can send partial body request property  
+example body request  
+{
+	"name": "Teste",
+	"email": "teste11@teste.com",
+}
