@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/leonves/JobUser.git",
-  "author": "Leonardo <leonardo.neves.external@k2partnering.com>",
+  "author": "Leonardo Neves",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.6",
     "uuidv4": "^6.2.13"
   },
   "scripts": {
-    "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts"
+    "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
+    "typeorm:cli": "ts-node ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
