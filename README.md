@@ -11,6 +11,7 @@ Steps to run this project:
 # Create User
 Create `http://localhost:3000/users`
 
+example body request  
 {
 	"name": "Teste",
 	"email": "teste11@teste.com",
@@ -22,5 +23,5 @@ Create `http://localhost:3000/users`
 
 
 # List User
-List All `http://localhost:3000/users`
+List All `http://localhost:3000/users`  
 List By Id `http://localhost:3000/users/id`
