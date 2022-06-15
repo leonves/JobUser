@@ -20,14 +20,14 @@ export class User {
 
     @OneToOne(() => Job)
     @JoinColumn({name: "job_id"})
-    public job: Job;
+    public job?: Job;
 
     @Column()
     public reports_to_id?: string;
 
     @OneToOne(() => User)
     @JoinColumn({name: "reports_to_id"})
-    public reports_to: User;
+    public reports_to?: User;
 
     constructor(props: Omit<User, 'id'>, id?: number) {
         Object.assign(this, props);

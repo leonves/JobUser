@@ -5,7 +5,7 @@ export class UsersCreate1655313807166 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-                name: "users",
+                name: "user",
                 columns: [
                     {
                         name: "id",
@@ -39,13 +39,13 @@ export class UsersCreate1655313807166 implements MigrationInterface {
                     {
                         name: "fk_user_job",
                         columnNames: ["job_id"],
-                        referencedTableName: "jobs",
+                        referencedTableName: "job",
                         referencedColumnNames: ["id"]
                     },
                     {
                         name: "fk_user_user",
                         columnNames: ["reports_to_id"],
-                        referencedTableName: "users",
+                        referencedTableName: "user",
                         referencedColumnNames: ["id"]
                     }
                 ]
@@ -55,7 +55,7 @@ export class UsersCreate1655313807166 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable("users");
+        await queryRunner.dropTable("user");
     }
 
 }

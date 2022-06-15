@@ -12,7 +12,8 @@ const configDatabase: DataSource = new DataSource({
     ],
     migrations: [
         'src/database/migrations/1655314453354-JobCreate.ts',
-        'src/database/migrations/1655313807166-UsersCreate.ts'
+        'src/database/migrations/1655320684637-UsersCreate.ts'
     ],
+    logging: true
 })
 export { configDatabase };
