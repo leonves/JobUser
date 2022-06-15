@@ -38,3 +38,6 @@ example body request
 	"name": "Teste",
 	"email": "teste11@teste.com",
 }
+
+# Delete User
+Delete By Id `http://localhost:3000/users/3add9380-69d6-418a-a6a0-454dcd40c385`
