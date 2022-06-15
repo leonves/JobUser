@@ -14,9 +14,12 @@ export class ListUserController {
 
     async findById(request: Request, response: Response): Promise<Response> {
         const user = await this.listUserUseCase.executeById(request.params.id)
-        if (!user) {
-            return response.status(404).json({'message': "User don't exist"});
+        try {
+            return response.json(user);
+        } catch (err) {
+            return response.status(400).json({
+                message: err.message || 'Unexpected error'
+            })
         }
-        return response.json(user);
     }
 }

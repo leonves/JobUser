@@ -32,7 +32,17 @@ export class PostgresUserRepository implements IUsersRepository {
         })
     }}
 
+    async findByReportsId(id: string): Promise<User[]> {
+        return await userRepo.find({
+            where: {reports_to_id: id}
+        })
+    }
+
     async update(id: string, user: {}): Promise<void> {{
         await userRepo.update(id, user)
+    }}
+
+    async delete(id: string): Promise<void> {{
+        await userRepo.delete({id});
     }}
 }
